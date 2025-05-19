@@ -1,0 +1,28 @@
+{
+  "name": "cypress-sauce-demo",
+  "version": "1.0.0",
+  "description": "Cypress UI Automation Test for Sauce Demo website",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:login": "cypress run --spec 'cypress/e2e/features/login.feature'",
+    "test:cart": "cypress run --spec 'cypress/e2e/features/shopping-cart.feature'",
+    "test:checkout": "cypress run --spec 'cypress/e2e/features/checkout.feature'"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "testing",
+    "cucumber",
+    "bdd"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress": "^14.3.3",
+    "esbuild": "^0.25.4"
+  }
+}
