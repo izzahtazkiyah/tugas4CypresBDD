@@ -23,3 +23,15 @@ Scenario: Successful login and cart operations
   When I navigate to the cart page
   Then I should see the product 0 in the cart
   And the product details should be correct
+
+Scenario: Attempt add to cart without entering any product information
+  Given I on to login page
+  When I enter login for cart
+  And I click the login button
+  Then I redirected to cart
+
+  When I navigate to the cart page
+
+  When I click the checkout button
+  And I click the continue button without entering any information
+  Then I should see a checkout error message

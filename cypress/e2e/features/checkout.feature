@@ -31,6 +31,13 @@ Feature: Checkout functionality
     # back to home
     When I going back to home
 
+  Scenario: Failed checkout with empty information
+    # login
+    Given Login for checkout
+    When Enter login for checkout
+    And Logining for checkout
+    Then Redirected to product page for checkout
+
     # negative case
     # add to cart
     When I add product 0 to the cart for checkout
